@@ -3,7 +3,7 @@
 namespace OAuth2\ServerBundle\Entity;
 
 /**
- * Powma\ServiceBundle\Entity\User
+ * Powma\ServiceBundle\Entity\User.
  */
 class Scope
 {
@@ -18,9 +18,10 @@ class Scope
     private $description;
 
     /**
-     * Set scope
+     * Set scope.
      *
-     * @param  string $scope
+     * @param string $scope
+     *
      * @return Scope
      */
     public function setScope($scope)
@@ -31,7 +32,7 @@ class Scope
     }
 
     /**
-     * Get scope
+     * Get scope.
      *
      * @return string
      */
@@ -41,9 +42,10 @@ class Scope
     }
 
     /**
-     * Set description
+     * Set description.
      *
-     * @param  string $description
+     * @param string $description
+     *
      * @return Scope
      */
     public function setDescription($description)
@@ -54,7 +56,7 @@ class Scope
     }
 
     /**
-     * Get description
+     * Get description.
      *
      * @return string
      */

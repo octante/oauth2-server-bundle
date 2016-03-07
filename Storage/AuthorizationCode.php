@@ -47,7 +47,7 @@ class AuthorizationCode implements AuthorizationCodeInterface
         $code = $this->em->getRepository('OAuth2ServerBundle:AuthorizationCode')->find($code);
 
         if (!$code) {
-            return null;
+            return;
         }
 
         return array(
@@ -55,7 +55,7 @@ class AuthorizationCode implements AuthorizationCodeInterface
             'user_id' => $code->getUserId(),
             'expires' => $code->getExpires()->getTimestamp(),
             'redirect_uri' => implode(' ', $code->getRedirectUri()),
-            'scope' => $code->getScope()
+            'scope' => $code->getScope(),
         );
     }
 
@@ -89,7 +89,9 @@ class AuthorizationCode implements AuthorizationCodeInterface
     {
         $client = $this->em->getRepository('OAuth2ServerBundle:Client')->find($client_id);
 
-        if (!$client) throw new \Exception('Unknown client identifier');
+        if (!$client) {
+            throw new \Exception('Unknown client identifier');
+        }
 
         $authorizationCode = new \OAuth2\ServerBundle\Entity\AuthorizationCode();
         $authorizationCode->setCode($code);
@@ -104,7 +106,7 @@ class AuthorizationCode implements AuthorizationCodeInterface
     }
 
     /**
-     * once an Authorization Code is used, it must be exipired
+     * once an Authorization Code is used, it must be exipired.
      *
      * @see http://tools.ietf.org/html/rfc6749#section-4.1.2
      *
@@ -113,7 +115,6 @@ class AuthorizationCode implements AuthorizationCodeInterface
      *    once, the authorization server MUST deny the request and SHOULD
      *    revoke (when possible) all tokens previously issued based on
      *    that authorization code
-     *
      */
     public function expireAuthorizationCode($code)
     {

@@ -15,8 +15,7 @@ class CreateUserCommand extends ContainerAwareCommand
             ->setName('OAuth2:CreateUser')
             ->setDescription('Create a basic OAuth2 user')
             ->addArgument('username', InputArgument::REQUIRED, 'The users unique username')
-            ->addArgument('password', InputArgument::REQUIRED, 'The users password (plaintext)')
-        ;
+            ->addArgument('password', InputArgument::REQUIRED, 'The users password (plaintext)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -27,11 +26,11 @@ class CreateUserCommand extends ContainerAwareCommand
         try {
             $userProvider->createUser($input->getArgument('username'), $input->getArgument('password'));
         } catch (\Doctrine\DBAL\DBALException $e) {
-            $output->writeln('<fg=red>Unable to create user ' . $input->getArgument('username') . '</fg=red>');
+            $output->writeln('<fg=red>Unable to create user '.$input->getArgument('username').'</fg=red>');
 
             return;
         }
 
-        $output->writeln('<fg=green>User ' . $input->getArgument('username') . ' created</fg=green>');
+        $output->writeln('<fg=green>User '.$input->getArgument('username').' created</fg=green>');
     }
 }

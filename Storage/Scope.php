@@ -64,7 +64,7 @@ class Scope implements ScopeInterface
      * does not request one. By returning "false", a
      * request_error is returned by the server to force a
      * scope request by the client. By returning "null",
-     * opt out of requiring scopes
+     * opt out of requiring scopes.
      *
      * @return
      * string representation of default scope, null if

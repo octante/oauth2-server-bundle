@@ -3,7 +3,7 @@
 namespace OAuth2\ServerBundle\Entity;
 
 /**
- * Client
+ * Client.
  */
 class ClientPublicKey
 {
@@ -13,7 +13,7 @@ class ClientPublicKey
     private $client;
 
     /**
-     * @var integer
+     * @var int
      */
     private $client_id;
 
@@ -23,9 +23,10 @@ class ClientPublicKey
     private $public_key;
 
     /**
-     * Set client
+     * Set client.
      *
-     * @param  \OAuth2\ServerBundle\Entity\Client $client
+     * @param \OAuth2\ServerBundle\Entity\Client $client
+     *
      * @return ClientPublicKey
      */
     public function setClient(\OAuth2\ServerBundle\Entity\Client $client = null)
@@ -39,7 +40,7 @@ class ClientPublicKey
     }
 
     /**
-     * Get client
+     * Get client.
      *
      * @return \OAuth2\ServerBundle\Entity\Client
      */
@@ -49,9 +50,10 @@ class ClientPublicKey
     }
 
     /**
-     * Set public key
+     * Set public key.
      *
-     * @param  string  $public_key
+     * @param string $public_key
+     *
      * @return Client
      */
     public function setPublicKey($public_key)
@@ -62,7 +64,7 @@ class ClientPublicKey
     }
 
     /**
-     * Get public key
+     * Get public key.
      *
      * @return string
      */

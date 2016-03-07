@@ -33,7 +33,6 @@ class OAuth2UserProvider implements UserProviderInterface
      * @see UsernameNotFoundException
      *
      * @throws UsernameNotFoundException if the user is not found
-     *
      */
     public function loadUserByUsername($username)
     {
@@ -53,6 +52,7 @@ class OAuth2UserProvider implements UserProviderInterface
      * totally reloaded (e.g. from the database), or if the UserInterface
      * object can just be merged into some internal array of users / identity
      * map.
+     *
      * @param UserInterface $user
      *
      * @return UserInterface
@@ -69,11 +69,11 @@ class OAuth2UserProvider implements UserProviderInterface
     }
 
     /**
-     * Whether this provider supports the given user class
+     * Whether this provider supports the given user class.
      *
      * @param string $class
      *
-     * @return Boolean
+     * @return bool
      */
     public function supportsClass($class)
     {
@@ -85,15 +85,12 @@ class OAuth2UserProvider implements UserProviderInterface
     }
 
     /**
-     * Creates a new user
+     * Creates a new user.
      *
      * @param string $username
-     *
      * @param string $password
-     *
-     * @param array $roles
-     *
-     * @param array $scopes
+     * @param array  $roles
+     * @param array  $scopes
      *
      * @return UserInterface
      */
@@ -119,7 +116,7 @@ class OAuth2UserProvider implements UserProviderInterface
     }
 
     /**
-     * Creates a salt for password hashing
+     * Creates a salt for password hashing.
      *
      * @return A salt
      */

@@ -15,8 +15,7 @@ class CreateScopeCommand extends ContainerAwareCommand
             ->setName('OAuth2:CreateScope')
             ->setDescription('Create a scope for use in OAuth2')
             ->addArgument('scope', InputArgument::REQUIRED, 'The scope key/name')
-            ->addArgument('description', InputArgument::REQUIRED, 'The scope description used on authorization screen')
-        ;
+            ->addArgument('description', InputArgument::REQUIRED, 'The scope description used on authorization screen');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -27,11 +26,11 @@ class CreateScopeCommand extends ContainerAwareCommand
         try {
             $scopeManager->createScope($input->getArgument('scope'), $input->getArgument('description'));
         } catch (\Doctrine\DBAL\DBALException $e) {
-            $output->writeln('<fg=red>Unable to create scope ' . $input->getArgument('scope') . '</fg=red>');
+            $output->writeln('<fg=red>Unable to create scope '.$input->getArgument('scope').'</fg=red>');
 
             return;
         }
 
-        $output->writeln('<fg=green>Scope ' . $input->getArgument('scope') . ' created</fg=green>');
+        $output->writeln('<fg=green>Scope '.$input->getArgument('scope').' created</fg=green>');
     }
 }

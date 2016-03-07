@@ -9,10 +9,9 @@ interface ScopeManagerInterface
     public function __construct(EntityManager $entityManager);
 
     /**
-     * Creates a new scope
+     * Creates a new scope.
      *
      * @param string $scope
-     *
      * @param string $description
      *
      * @return Scope
@@ -20,17 +19,19 @@ interface ScopeManagerInterface
     public function createScope($scope, $description = null);
 
     /**
-     * Find a single scope by the scope
+     * Find a single scope by the scope.
      *
      * @param $scope
+     *
      * @return Scope
      */
     public function findScopeByScope($scope);
 
     /**
-     * Find all the scopes by an array of scopes
+     * Find all the scopes by an array of scopes.
      *
      * @param array $scopes
+     *
      * @return mixed
      */
     public function findScopesByScopes(array $scopes);

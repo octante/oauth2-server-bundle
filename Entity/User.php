@@ -5,7 +5,7 @@ namespace OAuth2\ServerBundle\Entity;
 use OAuth2\ServerBundle\User\OAuth2UserInterface;
 
 /**
- * User
+ * User.
  */
 class User implements OAuth2UserInterface
 {
@@ -35,9 +35,10 @@ class User implements OAuth2UserInterface
     private $scopes;
 
     /**
-     * Set username
+     * Set username.
      *
-     * @param  string $username
+     * @param string $username
+     *
      * @return User
      */
     public function setUsername($username)
@@ -48,7 +49,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Get username
+     * Get username.
      *
      * @return string
      */
@@ -58,9 +59,10 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Set password
+     * Set password.
      *
-     * @param  string $password
+     * @param string $password
+     *
      * @return User
      */
     public function setPassword($password)
@@ -71,7 +73,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Get password
+     * Get password.
      *
      * @return string
      */
@@ -81,9 +83,10 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Set salt
+     * Set salt.
      *
-     * @param  string $salt
+     * @param string $salt
+     *
      * @return User
      */
     public function setSalt($salt)
@@ -94,7 +97,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Get salt
+     * Get salt.
      *
      * @return string
      */
@@ -104,9 +107,10 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Set roles
+     * Set roles.
      *
-     * @param  array $roles
+     * @param array $roles
+     *
      * @return User
      */
     public function setRoles($roles)
@@ -117,7 +121,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Get roles
+     * Get roles.
      *
      * @return array
      */
@@ -127,9 +131,10 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Set scopes
+     * Set scopes.
      *
-     * @param  array $scopes
+     * @param array $scopes
+     *
      * @return User
      */
     public function setScopes($scopes)
@@ -140,7 +145,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Get scopes
+     * Get scopes.
      *
      * @return array
      */
@@ -150,7 +155,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Get scope
+     * Get scope.
      *
      * @return string
      */
@@ -160,9 +165,7 @@ class User implements OAuth2UserInterface
     }
 
     /**
-     * Erase credentials
-     *
-     * @return void
+     * Erase credentials.
      */
     public function eraseCredentials()
     {

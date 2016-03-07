@@ -57,10 +57,18 @@ class UserCredentials implements UserCredentialsInterface
 
         // Do extra checks if implementing the AdvancedUserInterface
         if ($user instanceof AdvancedUserInterface) {
-            if ($user->isAccountNonExpired() === false) return false;
-            if ($user->isAccountNonLocked() === false) return false;
-            if ($user->isCredentialsNonExpired() === false) return false;
-            if ($user->isEnabled() === false) return false;
+            if ($user->isAccountNonExpired() === false) {
+                return false;
+            }
+            if ($user->isAccountNonLocked() === false) {
+                return false;
+            }
+            if ($user->isCredentialsNonExpired() === false) {
+                return false;
+            }
+            if ($user->isEnabled() === false) {
+                return false;
+            }
         }
 
         // Check password
@@ -102,7 +110,7 @@ class UserCredentials implements UserCredentialsInterface
 
         return array(
             'user_id' => $user->getUsername(),
-            'scope' => $scope
+            'scope' => $scope,
         );
     }
 }

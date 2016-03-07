@@ -15,8 +15,8 @@ class ContainerLoader
         }
 
         $container = new ContainerBuilder();
-        $locator   = new FileLocator(__DIR__ . '/..');
-        $loader    = new XmlFileLoader($container, $locator);
+        $locator = new FileLocator(__DIR__.'/..');
+        $loader = new XmlFileLoader($container, $locator);
 
         $loader->load($_SERVER['CONTAINER_CONFIG']);
 

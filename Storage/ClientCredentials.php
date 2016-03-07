@@ -79,7 +79,7 @@ class ClientCredentials implements ClientCredentialsInterface
         return array(
             'redirect_uri' => implode(' ', $client->getRedirectUri()),
             'client_id' => $client->getClientId(),
-            'grant_types' => $client->getGrantTypes()
+            'grant_types' => $client->getGrantTypes(),
         );
     }
 
@@ -121,7 +121,7 @@ class ClientCredentials implements ClientCredentialsInterface
 
     /**
      * Determine if the client is a "public" client, and therefore
-     * does not require passing credentials for certain grant types
+     * does not require passing credentials for certain grant types.
      *
      * @param $client_id
      * Client identifier to be check with.
@@ -149,7 +149,7 @@ class ClientCredentials implements ClientCredentialsInterface
     }
 
     /**
-     * Get the scope associated with this client
+     * Get the scope associated with this client.
      *
      * @return
      * STRING the space-delineated scope list for the specified client_id

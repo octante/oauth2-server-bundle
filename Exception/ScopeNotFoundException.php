@@ -5,7 +5,7 @@ namespace OAuth2\ServerBundle\Exception;
 class ScopeNotFoundException extends \Exception
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getMessageKey()
     {
@@ -13,7 +13,7 @@ class ScopeNotFoundException extends \Exception
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function serialize()
     {
@@ -23,7 +23,7 @@ class ScopeNotFoundException extends \Exception
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function unserialize($str)
     {

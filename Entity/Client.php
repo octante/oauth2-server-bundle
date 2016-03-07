@@ -3,7 +3,7 @@
 namespace OAuth2\ServerBundle\Entity;
 
 /**
- * Client
+ * Client.
  */
 class Client
 {
@@ -23,7 +23,7 @@ class Client
     private $redirect_uri;
 
     /**
-     * @var \OAuth2\ServerBundle\Entity\ClientPublicKey $public_key
+     * @var \OAuth2\ServerBundle\Entity\ClientPublicKey
      */
     private $grant_types;
 
@@ -33,9 +33,10 @@ class Client
     private $public_key;
 
     /**
-     * Set client_id
+     * Set client_id.
      *
-     * @param  string $clientId
+     * @param string $clientId
+     *
      * @return Client
      */
     public function setClientId($clientId)
@@ -46,7 +47,7 @@ class Client
     }
 
     /**
-     * Get client_id
+     * Get client_id.
      *
      * @return string
      */
@@ -56,9 +57,10 @@ class Client
     }
 
     /**
-     * Set client_secret
+     * Set client_secret.
      *
-     * @param  string $clientSecret
+     * @param string $clientSecret
+     *
      * @return Client
      */
     public function setClientSecret($clientSecret)
@@ -69,7 +71,7 @@ class Client
     }
 
     /**
-     * Get client_secret
+     * Get client_secret.
      *
      * @return string
      */
@@ -79,9 +81,10 @@ class Client
     }
 
     /**
-     * Set redirect_uri
+     * Set redirect_uri.
      *
-     * @param  array  $redirectUri
+     * @param array $redirectUri
+     *
      * @return Client
      */
     public function setRedirectUri($redirectUri)
@@ -92,7 +95,7 @@ class Client
     }
 
     /**
-     * Get redirect_uri
+     * Get redirect_uri.
      *
      * @return array
      */
@@ -102,9 +105,10 @@ class Client
     }
 
     /**
-     * Set grant_types
+     * Set grant_types.
      *
-     * @param  array  $grantTypes
+     * @param array $grantTypes
+     *
      * @return Client
      */
     public function setGrantTypes($grantTypes)
@@ -115,7 +119,7 @@ class Client
     }
 
     /**
-     * Get grant_types
+     * Get grant_types.
      *
      * @return array
      */
@@ -129,9 +133,10 @@ class Client
     private $scopes;
 
     /**
-     * Set scopes
+     * Set scopes.
      *
-     * @param  array  $scopes
+     * @param array $scopes
+     *
      * @return Client
      */
     public function setScopes($scopes)
@@ -142,7 +147,7 @@ class Client
     }
 
     /**
-     * Get scopes
+     * Get scopes.
      *
      * @return array
      */
@@ -152,9 +157,10 @@ class Client
     }
 
     /**
-     * Set public key
+     * Set public key.
      *
-     * @param  \OAuth2\ServerBundle\Entity\ClientPublicKey $public_key
+     * @param \OAuth2\ServerBundle\Entity\ClientPublicKey $public_key
+     *
      * @return Client
      */
     public function setPublicKey(\OAuth2\ServerBundle\Entity\ClientPublicKey $public_key = null)
@@ -165,7 +171,7 @@ class Client
     }
 
     /**
-     * Get public key
+     * Get public key.
      *
      * @return \OAuth2\ServerBundle\Entity\ClientPublicKey
      */

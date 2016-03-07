@@ -17,8 +17,7 @@ class CreateClientCommand extends ContainerAwareCommand
             ->addArgument('identifier', InputArgument::REQUIRED, 'The client identifier')
             ->addArgument('redirect_uri', InputArgument::REQUIRED, 'The client redirect uris (comma separated)')
             ->addArgument('grant_types', InputArgument::OPTIONAL, 'Grant types to restrict the client to (comma separated)')
-            ->addArgument('scopes', InputArgument::OPTIONAL, 'Scopes to restrict the client to (comma separated)')
-        ;
+            ->addArgument('scopes', InputArgument::OPTIONAL, 'Scopes to restrict the client to (comma separated)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -34,8 +33,8 @@ class CreateClientCommand extends ContainerAwareCommand
                 explode(',', $input->getArgument('scopes'))
             );
         } catch (\Doctrine\DBAL\DBALException $e) {
-            $output->writeln('<fg=red>Unable to create client ' . $input->getArgument('identifier') . '</fg=red>');
-            $output->writeln('<fg=red>' . $e->getMessage() . '</fg=red>');
+            $output->writeln('<fg=red>Unable to create client '.$input->getArgument('identifier').'</fg=red>');
+            $output->writeln('<fg=red>'.$e->getMessage().'</fg=red>');
 
             return 1;
         } catch (\OAuth2\ServerBundle\Exception\ScopeNotFoundException $e) {
@@ -44,6 +43,6 @@ class CreateClientCommand extends ContainerAwareCommand
             return 1;
         }
 
-        $output->writeln('<fg=green>Client ' . $input->getArgument('identifier') . ' created with secret ' . $client->getClientSecret() . '</fg=green>');
+        $output->writeln('<fg=green>Client '.$input->getArgument('identifier').' created with secret '.$client->getClientSecret().'</fg=green>');
     }
 }

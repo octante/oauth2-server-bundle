@@ -14,10 +14,9 @@ class ScopeManager implements ScopeManagerInterface
     }
 
     /**
-     * Creates a new scope
+     * Creates a new scope.
      *
      * @param string $scope
-     *
      * @param string $description
      *
      * @return Scope
@@ -36,9 +35,10 @@ class ScopeManager implements ScopeManagerInterface
     }
 
     /**
-     * Find a single scope by the scope
+     * Find a single scope by the scope.
      *
      * @param $scope
+     *
      * @return Scope
      */
     public function findScopeByScope($scope)
@@ -49,9 +49,10 @@ class ScopeManager implements ScopeManagerInterface
     }
 
     /**
-     * Find all the scopes by an array of scopes
+     * Find all the scopes by an array of scopes.
      *
      * @param array $scopes
+     *
      * @return mixed|void
      */
     public function findScopesByScopes(array $scopes)

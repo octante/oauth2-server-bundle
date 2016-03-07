@@ -30,9 +30,10 @@ class AccessToken
     private $client;
 
     /**
-     * Set token
+     * Set token.
      *
-     * @param  string      $token
+     * @param string $token
+     *
      * @return AccessToken
      */
     public function setToken($token)
@@ -43,7 +44,7 @@ class AccessToken
     }
 
     /**
-     * Get token
+     * Get token.
      *
      * @return string
      */
@@ -53,9 +54,10 @@ class AccessToken
     }
 
     /**
-     * Set user_id
+     * Set user_id.
      *
-     * @param  string      $userId
+     * @param string $userId
+     *
      * @return AccessToken
      */
     public function setUserId($userId)
@@ -66,7 +68,7 @@ class AccessToken
     }
 
     /**
-     * Get user_id
+     * Get user_id.
      *
      * @return string
      */
@@ -76,9 +78,10 @@ class AccessToken
     }
 
     /**
-     * Set expires
+     * Set expires.
      *
-     * @param  \DateTime   $expires
+     * @param \DateTime $expires
+     *
      * @return AccessToken
      */
     public function setExpires($expires)
@@ -96,7 +99,7 @@ class AccessToken
     }
 
     /**
-     * Get expires
+     * Get expires.
      *
      * @return \DateTime
      */
@@ -106,9 +109,10 @@ class AccessToken
     }
 
     /**
-     * Set scope
+     * Set scope.
      *
-     * @param  string      $scope
+     * @param string $scope
+     *
      * @return AccessToken
      */
     public function setScope($scope)
@@ -119,7 +123,7 @@ class AccessToken
     }
 
     /**
-     * Get scope
+     * Get scope.
      *
      * @return string
      */
@@ -129,9 +133,10 @@ class AccessToken
     }
 
     /**
-     * Set client
+     * Set client.
      *
-     * @param  \OAuth2\ServerBundle\Entity\Client $client
+     * @param \OAuth2\ServerBundle\Entity\Client $client
+     *
      * @return AccessToken
      */
     public function setClient(\OAuth2\ServerBundle\Entity\Client $client = null)
@@ -142,7 +147,7 @@ class AccessToken
     }
 
     /**
-     * Get client
+     * Get client.
      *
      * @return \OAuth2\ServerBundle\Entity\Client
      */

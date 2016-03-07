@@ -37,7 +37,7 @@ class AccessToken implements AccessTokenInterface
         $accessToken = $this->em->getRepository('OAuth2ServerBundle:AccessToken')->find($oauth_token);
 
         if (!$accessToken) {
-            return null;
+            return;
         }
 
         // Get Client
@@ -47,7 +47,7 @@ class AccessToken implements AccessTokenInterface
             'client_id' => $client->getClientId(),
             'user_id' => $accessToken->getUserId(),
             'expires' => $accessToken->getExpires()->getTimestamp(),
-            'scope' => $accessToken->getScope()
+            'scope' => $accessToken->getScope(),
         );
     }
 
@@ -75,7 +75,7 @@ class AccessToken implements AccessTokenInterface
         $client = $this->em->getRepository('OAuth2ServerBundle:Client')->find($client_id);
 
         if (!$client) {
-            return null;
+            return;
         }
 
         // Create Access Token

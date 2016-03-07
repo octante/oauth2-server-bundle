@@ -15,10 +15,10 @@ class CreateClientCommandTest extends \PHPUnit_Framework_TestCase
         $command = new CreateClientCommand();
         $command->setContainer($container);
 
-        $client_id    = 'Client-ID-'.rand();
+        $client_id = 'Client-ID-'.rand();
         $redirectUris = 'http://brentertainment.com';
-        $grantTypes   = 'authorization_code,client_credentials';
-        $scopes		  = 'fakescope';
+        $grantTypes = 'authorization_code,client_credentials';
+        $scopes = 'fakescope';
 
         $input = new ArgvInput(array('command', $client_id, $redirectUris, $grantTypes, $scopes));
         $output = new BufferedOutput();
@@ -35,10 +35,10 @@ class CreateClientCommandTest extends \PHPUnit_Framework_TestCase
         $command = new CreateClientCommand();
         $command->setContainer($container);
 
-        $client_id    = 'Client-ID-'.rand();
+        $client_id = 'Client-ID-'.rand();
         $redirectUris = 'http://brentertainment.com';
-        $grantTypes   = 'authorization_code,client_credentials';
-        $scope        = 'scope1';
+        $grantTypes = 'authorization_code,client_credentials';
+        $scope = 'scope1';
 
         // ensure the scope exists
         $scopeStorage = $container->get('oauth2.storage.scope');
@@ -56,7 +56,7 @@ class CreateClientCommandTest extends \PHPUnit_Framework_TestCase
 
         // verify client details have been stored
         $storage = $container->get('oauth2.storage.client_credentials');
-        $client  = $storage->getClientDetails($client_id);
+        $client = $storage->getClientDetails($client_id);
 
         $this->assertNotNull($client);
         $this->assertEquals($redirectUris, $client['redirect_uri']);

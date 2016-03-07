@@ -3,7 +3,7 @@
 namespace OAuth2\ServerBundle\Entity;
 
 /**
- * RefreshToken
+ * RefreshToken.
  */
 class RefreshToken
 {
@@ -33,9 +33,10 @@ class RefreshToken
     private $client;
 
     /**
-     * Set token
+     * Set token.
      *
-     * @param  string       $token
+     * @param string $token
+     *
      * @return RefreshToken
      */
     public function setToken($token)
@@ -46,7 +47,7 @@ class RefreshToken
     }
 
     /**
-     * Get token
+     * Get token.
      *
      * @return string
      */
@@ -56,9 +57,10 @@ class RefreshToken
     }
 
     /**
-     * Set user_id
+     * Set user_id.
      *
-     * @param  string       $userId
+     * @param string $userId
+     *
      * @return RefreshToken
      */
     public function setUserId($userId)
@@ -69,7 +71,7 @@ class RefreshToken
     }
 
     /**
-     * Get user_id
+     * Get user_id.
      *
      * @return string
      */
@@ -79,9 +81,10 @@ class RefreshToken
     }
 
     /**
-     * Set expires
+     * Set expires.
      *
-     * @param  \DateTime    $expires
+     * @param \DateTime $expires
+     *
      * @return RefreshToken
      */
     public function setExpires($expires)
@@ -99,7 +102,7 @@ class RefreshToken
     }
 
     /**
-     * Get expires
+     * Get expires.
      *
      * @return \DateTime
      */
@@ -109,9 +112,10 @@ class RefreshToken
     }
 
     /**
-     * Set scope
+     * Set scope.
      *
-     * @param  string       $scope
+     * @param string $scope
+     *
      * @return RefreshToken
      */
     public function setScope($scope)
@@ -122,7 +126,7 @@ class RefreshToken
     }
 
     /**
-     * Get scope
+     * Get scope.
      *
      * @return string
      */
@@ -132,9 +136,10 @@ class RefreshToken
     }
 
     /**
-     * Set client
+     * Set client.
      *
-     * @param  \OAuth2\ServerBundle\Entity\Client $client
+     * @param \OAuth2\ServerBundle\Entity\Client $client
+     *
      * @return RefreshToken
      */
     public function setClient(\OAuth2\ServerBundle\Entity\Client $client = null)
@@ -145,7 +150,7 @@ class RefreshToken
     }
 
     /**
-     * Get client
+     * Get client.
      *
      * @return \OAuth2\ServerBundle\Entity\Client
      */

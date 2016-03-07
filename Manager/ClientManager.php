@@ -21,15 +21,12 @@ class ClientManager
     }
 
     /**
-     * Creates a new client
+     * Creates a new client.
      *
      * @param string $identifier
-     *
-     * @param array $redirect_uris
-     *
-     * @param array $grant_type
-     *
-     * @param array $scopes
+     * @param array  $redirect_uris
+     * @param array  $grant_type
+     * @param array  $scopes
      *
      * @return Client
      */
@@ -60,7 +57,7 @@ class ClientManager
     }
 
     /**
-     * Creates a secret for a client
+     * Creates a secret for a client.
      *
      * @return A secret
      */
